@@ -77,7 +77,8 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;text-transform:uppe
 .pozycja .data{font-family:var(--display);font-size:1.02rem;white-space:nowrap}
 .pozycja .data span{color:var(--szept);font-family:var(--tekst);font-size:.85rem;margin-left:7px}
 .pozycja h3{font-size:1.06rem;font-weight:600}
-.opis-poz{margin:2px 0 0;font-size:.84rem;line-height:1.4;color:var(--szept)}
+.pozycja h3 small{display:block;font:400 .84rem/1.4 var(--tekst);color:var(--szept);
+  text-transform:none;letter-spacing:0;margin-top:2px}
 .cena{font-family:var(--display);font-size:1rem;text-align:right;white-space:nowrap}
 .status{font:400 .72rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;
   text-align:center;padding:7px 10px;border:1px solid var(--linia);white-space:nowrap}
