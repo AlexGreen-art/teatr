@@ -1,0 +1,147 @@
+/* Teatr na Piętrze — repertuar jako serce strony. */
+
+:root{
+  --scena:#0f0f10;
+  --scena-jasna:#1a1a1c;
+  --kosc:#f4f1ea;
+  --kosc-cien:#e6e1d5;
+  --karmin:#b3232a;
+  --mosiadz:#c9a227;
+  --szept:#8d877c;
+  --linia:#2a2a2d;
+  --linia-jasna:#d8d2c4;
+
+  --display:"Oswald",Impact,sans-serif;
+  --tekst:"Lora",Georgia,serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--scena);color:var(--kosc);
+  font-family:var(--tekst);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;text-transform:uppercase;
+  letter-spacing:.01em;line-height:1.05}
+:focus-visible{outline:3px solid var(--mosiadz);outline-offset:3px}
+[id]{scroll-margin-top:72px}
+
+.owijka{width:min(1140px,100% - 44px);margin-inline:auto}
+.waska{width:min(1140px,100% - 44px);margin-inline:auto}
+.waska > *{max-width:660px}
+
+/* pasek */
+.pasek{position:sticky;top:0;z-index:30;background:var(--scena);border-bottom:1px solid var(--linia)}
+.pasek-rzad{display:flex;align-items:center;gap:20px;height:64px}
+.znak{font-family:var(--display);font-size:1.24rem;text-transform:uppercase;letter-spacing:.06em;
+  text-decoration:none;line-height:1.1}
+.znak em{display:block;font:400 .6rem/1 var(--tekst);font-style:normal;letter-spacing:.16em;
+  text-transform:none;color:var(--szept);margin-top:4px}
+.pasek nav{margin-left:auto;display:flex;gap:20px;font-size:.88rem;font-family:var(--display);
+  text-transform:uppercase;letter-spacing:.08em}
+.pasek nav a{text-decoration:none;color:var(--szept)}
+.pasek nav a:hover{color:var(--kosc)}
+.bilety{background:var(--karmin);color:#fff;text-decoration:none;font-family:var(--display);
+  text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;font-size:.84rem;white-space:nowrap}
+.bilety:hover{background:#8e1b21}
+
+/* otwarcie */
+.afisz{padding:clamp(40px,6vw,80px) 0 clamp(28px,4vw,44px);border-bottom:1px solid var(--linia)}
+.afisz h1{font-size:clamp(2.6rem,7.5vw,5.4rem);max-width:14ch}
+.afisz h1 span{color:var(--karmin)}
+.afisz p{max-width:52ch;color:#bfb9ad;margin:20px 0 0;font-size:clamp(1rem,1.7vw,1.15rem)}
+.najblizszy{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+  margin-top:34px;padding:18px 22px;background:var(--scena-jasna);border-left:4px solid var(--mosiadz)}
+.najblizszy .data{font-family:var(--display);font-size:1.5rem;line-height:1;white-space:nowrap}
+.najblizszy .data small{display:block;font:400 .74rem/1.3 var(--tekst);color:var(--szept);
+  margin-top:5px;text-transform:none}
+.najblizszy h2{font-size:1.3rem}
+.najblizszy p{margin:4px 0 0;font-size:.92rem;color:var(--szept)}
+
+/* bloki */
+.blok{padding:clamp(44px,5.5vw,74px) 0}
+.blok-jasny{background:var(--kosc);color:var(--scena)}
+.nadpis{font:400 .7rem/1 var(--display);letter-spacing:.28em;text-transform:uppercase;
+  color:var(--mosiadz);margin-bottom:14px}
+.blok-jasny .nadpis{color:var(--karmin)}
+.tytul{font-size:clamp(1.7rem,3.6vw,2.7rem);max-width:22ch}
+.wstep{color:#bfb9ad;max-width:58ch;margin-top:12px}
+.blok-jasny .wstep{color:#5b564c}
+
+/* repertuar */
+.repertuar{margin-top:30px;border-top:1px solid var(--linia)}
+.blok-jasny .repertuar{border-top-color:var(--linia-jasna)}
+.pozycja{display:grid;grid-template-columns:148px 1fr 92px 128px;gap:18px;align-items:center;
+  padding:14px 0;border-bottom:1px solid var(--linia)}
+.blok-jasny .pozycja{border-bottom-color:var(--linia-jasna)}
+.pozycja .data{font-family:var(--display);font-size:1.02rem;white-space:nowrap}
+.pozycja .data span{color:var(--szept);font-family:var(--tekst);font-size:.85rem;margin-left:7px}
+.pozycja h3{font-size:1.06rem;font-weight:600}
+.pozycja h3 small{display:block;font:400 .84rem/1.4 var(--tekst);color:var(--szept);
+  text-transform:none;letter-spacing:0;margin-top:2px}
+.cena{font-family:var(--display);font-size:1rem;text-align:right;white-space:nowrap}
+.status{font:400 .72rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;
+  text-align:center;padding:7px 10px;border:1px solid var(--linia);white-space:nowrap}
+.blok-jasny .status{border-color:var(--linia-jasna)}
+.status.ostatnie{border-color:var(--mosiadz);color:var(--mosiadz)}
+.status.brak{color:var(--szept);opacity:.65}
+.status.wolne{border-color:var(--karmin);color:var(--karmin)}
+
+/* spektakle */
+.spektakle{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.spektakl .ph{aspect-ratio:3/4;margin-bottom:14px}
+.spektakl h3{font-size:1.25rem;margin-bottom:6px}
+.spektakl p{margin:0;font-size:.94rem;color:#5b564c}
+.metryka{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.82rem;color:#7a746a}
+.metryka b{font-weight:600;color:var(--scena)}
+
+/* bilety */
+.ceny{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:28px;background:var(--linia)}
+.ceny div{background:var(--scena);padding:18px 20px;display:grid;
+  grid-template-columns:1fr auto;gap:14px;align-items:baseline}
+.ceny span small{display:block;color:var(--szept);font-size:.85rem}
+.ceny b{font-family:var(--display);font-size:1.3rem;color:var(--mosiadz);white-space:nowrap}
+.jak{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.jak article{border-top:2px solid var(--karmin);padding-top:13px}
+.jak b{display:block;font:400 .7rem/1 var(--display);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--karmin);margin-bottom:7px}
+.jak p{margin:0;font-size:.94rem;color:#bfb9ad}
+
+/* archiwum */
+.archiwum{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:26px}
+.archiwum div{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;
+  padding:10px 0;border-bottom:1px solid var(--linia-jasna);font-size:.96rem}
+.archiwum span{color:#7a746a;font-size:.86rem;white-space:nowrap}
+
+/* zdjęcia */
+.ph{position:relative;overflow:hidden;background:var(--scena-jasna)}
+.blok-jasny .ph{background:var(--kosc-cien)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.brak{background:repeating-linear-gradient(45deg,#26262a 0 10px,#1f1f23 10px 20px)}
+.blok-jasny .ph.brak{background:repeating-linear-gradient(45deg,#e0dacd 0 10px,#d8d2c4 10px 20px)}
+.ph.brak:after{content:attr(data-opis);position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:14px;
+  font:400 .72rem/1.5 var(--display);letter-spacing:.14em;text-transform:uppercase;color:#807a70}
+.ph.brak img{display:none}
+.para{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.para .ph{aspect-ratio:3/2}
+.podpis{font-size:.82rem;color:var(--szept);margin-top:9px}
+
+/* kontakt */
+.dane{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.dane div{border-top:2px solid var(--mosiadz);padding-top:12px}
+.dane dt{font:400 .68rem/1 var(--display);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--szept);margin-bottom:7px}
+.dane dd{margin:0;font-size:1.04rem}
+.dane a{text-decoration:none;border-bottom:2px solid var(--karmin)}
+main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items:center}
+
+@media(max-width:900px){
+  .spektakle,.jak,.ceny,.dane,.para,.archiwum{grid-template-columns:1fr}
+  .pozycja{grid-template-columns:1fr auto;gap:4px 14px}
+  .pozycja .data{grid-column:1/-1}
+  .najblizszy{grid-template-columns:1fr;gap:12px}
+  .pasek nav{display:none}
+  .bilety{margin-left:auto}
+  main > section:last-child{min-height:0;display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
