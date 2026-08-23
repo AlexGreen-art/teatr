@@ -147,7 +147,7 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
     font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;
     border-top:1px solid var(--linia)}
   .menu-tel a{text-decoration:none;color:var(--szept);white-space:nowrap}
-  [id]{scroll-margin-top:118px}
+  [id]{scroll-margin-top:110px}
   .bilety{margin-left:auto}
   main > section:last-child{min-height:0;display:block}
 }
