@@ -36,10 +36,11 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;text-transform:uppe
   text-decoration:none;line-height:1.1}
 .znak em{display:block;font:400 .6rem/1 var(--tekst);font-style:normal;letter-spacing:.16em;
   text-transform:none;color:var(--szept);margin-top:4px}
-.pasek nav{margin-left:auto;display:flex;gap:20px;font-size:.88rem;font-family:var(--display);
+.nav-desktop{margin-left:auto;display:flex;gap:20px;font-size:.88rem;font-family:var(--display);
   text-transform:uppercase;letter-spacing:.08em}
-.pasek nav a{text-decoration:none;color:var(--szept)}
-.pasek nav a:hover{color:var(--kosc)}
+.menu-tel{display:none}
+.nav-desktop a{text-decoration:none;color:var(--szept)}
+.nav-desktop a:hover{color:var(--kosc)}
 .bilety{background:var(--karmin);color:#fff;text-decoration:none;font-family:var(--display);
   text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;font-size:.84rem;white-space:nowrap}
 .bilety:hover{background:#8e1b21}
@@ -141,7 +142,11 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
   .pozycja{grid-template-columns:1fr auto;gap:4px 14px}
   .pozycja .data{grid-column:1/-1}
   .najblizszy{grid-template-columns:1fr;gap:12px}
-  .pasek nav{display:none}
+  .nav-desktop{display:none}
+  .menu-tel{display:flex;gap:18px;overflow-x:auto;font-family:var(--display);
+    text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;
+    padding:8px 0 10px;border-top:1px solid var(--linia)}
+  .menu-tel a{text-decoration:none;color:var(--szept);white-space:nowrap}
   .bilety{margin-left:auto}
   main > section:last-child{min-height:0;display:block}
 }
