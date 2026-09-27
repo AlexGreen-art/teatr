@@ -152,3 +152,17 @@ main > section:last-child{min-height:calc(100vh - 72px);display:flex;align-items
   main > section:last-child{min-height:0;display:block}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* ---------- Zdjęcia: tło afisza i pasy fotograficzne ---------- */
+.afisz-tlo{background:linear-gradient(90deg,rgba(15,15,16,.97) 0%,rgba(15,15,16,.93) 34%,
+  rgba(15,15,16,.62) 66%,rgba(15,15,16,.40) 100%),url('img/hero-sala.jpg') center/cover no-repeat;
+  border-bottom:1px solid var(--linia)}
+.afisz-tlo .afisz{border-bottom:0}
+.pas-foto{margin:clamp(26px,3.4vw,42px) 0 0}
+.pas-foto img{width:100%;height:clamp(230px,30vw,400px);object-fit:cover;border-radius:2px}
+@media(max-width:700px){
+  .afisz-tlo{background:linear-gradient(180deg,rgba(15,15,16,.90) 0%,rgba(15,15,16,.95) 55%,
+    rgba(15,15,16,.98) 100%),url('img/hero-sala.jpg') center/cover no-repeat}
+  .pas-foto img{height:200px}
+}
